@@ -94,17 +94,17 @@ classdef responseClass<handle
                     end
                 end
             end
-            % Mooring
-            if isstruct(mooringOutput)
-                signals = {'position','velocity','forceMooring'}; 
-                for ii = 1:length(mooringOutput)
-                    obj.mooring(ii).name = mooringOutput(ii).name;
-                    obj.mooring(ii).time = mooringOutput(ii).time;
-                    for jj = 1:length(signals)
-                        obj.mooring(ii).(signals{jj}) = mooringOutput(ii).signals.values(:, (jj-1)*6+1:(jj-1)*6+6);
-                    end
-                end
-            end
+%             % Mooring
+%             if isstruct(mooringOutput)
+%                 signals = {'position','velocity','forceMooring'}; 
+%                 for ii = 1:length(mooringOutput)
+%                     obj.mooring(ii).name = mooringOutput(ii).name;
+%                     obj.mooring(ii).time = mooringOutput(ii).time;
+%                     for jj = 1:length(signals)
+%                         obj.mooring(ii).(signals{jj}) = mooringOutput(ii).signals.values(:, (jj-1)*6+1:(jj-1)*6+6);
+%                     end
+%                 end
+%             end
             % PTO-Sim
             if isstruct(ptosimOutput)
                 obj.ptosim=ptosimOutput;
