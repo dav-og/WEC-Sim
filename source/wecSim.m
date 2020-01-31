@@ -297,7 +297,7 @@ tic
 %% Post processing and Saving Results
 postProcess
 % User Defined Post-Processing
-if exist('userDefinedFunctions.m','file') == 2
+if exist('./userDefinedFunctions.m','file') == 2
     userDefinedFunctions;
 end
 % ASCII files
